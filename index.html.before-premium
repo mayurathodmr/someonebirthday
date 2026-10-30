@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<meta name="description" content="A little birthday surprise made just for you.">
+<title>A Special Surprise For You ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="ambient"></div>
+<div class="floating-hearts" id="hearts"></div>
+
+<div class="top-tag">MADE WITH ♡ JUST FOR YOU</div>
+
+<!-- INTRO -->
+<section class="intro" id="intro">
+  <div class="intro-card">
+    <div class="tiny-stars">✦ · ˚ ✧ · ˚</div>
+    <div class="gift" id="gift" onclick="openSurprise()">🎁</div>
+    <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+    <h1>Hey, <span>Beautiful!</span></h1>
+    <p class="sub">Someone has prepared a little surprise just for you...</p>
+    <button class="primary-btn" onclick="openSurprise()">Open Your Surprise ♡</button>
+    <div class="bottom-note">psst... today is all about you ✨</div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main id="main" class="hidden">
+
+<section class="hero section">
+  <div class="hero-content">
+    <span class="pill">✿ YOUR SPECIAL DAY ✿</span>
+    <p class="script">A day as lovely as you</p>
+    <h1>Happy Birthday<br><span class="gradient">Beautiful Soul!</span></h1>
+    <p class="hero-text">Today, the world celebrates someone who makes it a little more beautiful just by being in it.</p>
+    <button class="primary-btn" onclick="scrollToSection('gallery')">Explore Your Surprise ↓</button>
+    <div class="sparkle">✧ ♡ ✧</div>
+  </div>
+  <div class="hero-art">
+    <div class="orbit orbit-one"></div>
+    <div class="orbit orbit-two"></div>
+    <div class="hero-circle">
+      <img src="assets/A.jpg" onerror="this.style.display='none'">
+      <span class="photo-placeholder">🎀</span>
+    </div>
+    <span class="deco d1">♡</span>
+    <span class="deco d2">✿</span>
+    <span class="deco d3">✨</span>
+    <span class="deco d4">🦋</span>
+  </div>
+</section>
+
+<section class="section gallery-section" id="gallery">
+  <div class="section-heading">
+    <span class="pill">LITTLE MOMENTS</span>
+    <h2>A Gallery of <em>Beautiful Memories</em></h2>
+    <p>Every picture has a little story. Every moment is special.</p>
+  </div>
+  <div class="gallery">
+    <div class="polaroid rotate-left">
+      <img src="assets/A.jpg" onerror="this.src='https://placehold.co/500x600/ffe0eb/aa6480?text=Your+Photo+1'">
+      <span>Simply you ♡</span>
+    </div>
+    <div class="polaroid rotate-right">
+      <img src="assets/C.jpg" onerror="this.src='https://placehold.co/500x600/f1e3ff/9168aa?text=Your+Photo+2'">
+      <span>Pretty moments ✨</span>
+    </div>
+    <div class="polaroid rotate-left">
+      <img src="assets/D.jpg" onerror="this.src='https://placehold.co/500x600/ffe9d9/bb8168?text=Your+Photo+3'">
+      <span>One of a kind 🎀</span>
+    </div>
+    <div class="polaroid rotate-right">
+      <img src="assets/E.jpg" onerror="this.src='https://placehold.co/500x600/e6efff/7087b5?text=Your+Photo+4'">
+      <span>Forever memorable ♡</span>
+    </div>
+  </div>
+</section>
+
+<section class="message-section section" id="message">
+  <div class="message-card">
+    <span class="pill">A NOTE FOR YOU 💌</span>
+    <div class="letter-icon">💌</div>
+    <h2>Something from <em>the heart...</em></h2>
+    <p class="message-text" id="messageText">
+      On your special day, I just want you to know how wonderful you are.
+      May your smile never fade, your dreams find their wings,
+      and your life always be filled with beautiful little moments.
+      You deserve all the happiness this world has to offer.
+      Keep shining, keep smiling and always be YOU. ♡
+    </p>
+    <div class="signature">With lots of love ♡</div>
+  </div>
+</section>
+
+<section class="cake-section section" id="cake">
+  <span class="pill">MAKE A WISH ✨</span>
+  <h2>One wish. A thousand <em>possibilities.</em></h2>
+  <p>Close your eyes, make a wish and blow the candles! 🎂</p>
+  <div class="cake" id="cakeArt">
+    <div class="flames">
+      <span class="flame">🔥</span><span class="flame">🔥</span><span class="flame">🔥</span>
+    </div>
+    <div class="candles"><i></i><i></i><i></i></div>
+    <div class="cake-top"></div>
+    <div class="cake-layer"></div>
+    <div class="cake-bottom"></div>
+    <div class="plate"></div>
+  </div>
+  <button class="primary-btn" onclick="blowCandles()">Blow the Candles 🕯️</button>
+  <p id="wishText" class="wish-text"></p>
+</section>
+
+<section class="final-section section">
+  <div class="final-card">
+    <div class="final-stars">✧ ✦ ♡ ✦ ✧</div>
+    <p class="script">Once again...</p>
+    <h2>Happy Birthday!</h2>
+    <p>Never forget how special you are.<br>Keep being your magical self. 🎀</p>
+    <button class="primary-btn" onclick="celebrate()">One Last Surprise ♡</button>
+    <div class="final-decoration">🌷 🦋 🎀 🌸</div>
+  </div>
+</section>
+
+
+
+
+
+<section id="love-special" class="love-special">
+  <div class="love-glow"></div>
+  <div class="love-content">
+    <span class="love-kicker">A LITTLE SOMETHING FROM MY HEART</span>
+    <h2>For My <span>Special One</span> ❤️</h2>
+    <div class="love-divider">♡ ✨ ♡</div>
+    <p class="love-line">Dhanshri... ek baat dil se kehni hai.</p>
+    <p>
+      Tu kabhi meri life ka ek bahut khoobsurat hissa thi...
+      aur sach kahu toh aaj bhi hai. Waqt badla, situations badli,
+      lekin mere dil mein tere liye jo feelings hain, woh kabhi kam nahi hui.
+    </p>
+    <p>
+      Aaj bhi main tujhse pehle se bhi zyada pyaar karta hoon.
+      Tu mere liye sirf special nahi, balki woh insaan hai
+      jise main dil se kabhi khona nahi chahta.
+    </p>
+    <p>
+      Teri smile mere liye bahut matter karti hai.
+      Main bas chahta hoon ki tu hamesha khush rahe,
+      tere saare dreams poore ho aur teri life hamesha beautiful rahe.
+    </p>
+    <p class="love-highlight">
+      I don't know what the future holds, but one thing is true...
+      you will always have a very special place in my heart. ❤️
+    </p>
+    <div class="love-signature">With lots of love, always... 💗</div>
+  </div>
+</section>
+
+<section id="cake-surprise" class="cake-surprise">
+  <div class="cake-heading">
+    <span>MAKE A WISH, BEAUTIFUL ✨</span>
+    <h2>A Cake Made With Love 🎂</h2>
+    <p>Close your eyes, make a wish and tap the candles!</p>
+  </div>
+  <div class="cake-scene">
+    <div class="cake-candles">
+      <span class="candle"><i></i></span>
+      <span class="candle"><i></i></span>
+      <span class="candle"><i></i></span>
+    </div>
+    <div class="cake-top"></div>
+    <div class="cake-middle"></div>
+    <div class="cake-bottom"></div>
+    <div class="cake-plate"></div>
+  </div>
+  <button class="cake-button" onclick="specialCakeWish()">Blow the candles ✨</button>
+  <p id="cake-message">May all your wishes come true, Dhanshri! 💖</p>
+</section>
+
+<div id="love-final" class="love-final">
+  <div class="final-heart">💗</div>
+  <h2>You're My Special One</h2>
+  <p>Some feelings are too beautiful to explain in words. Happy Birthday, Dhanshri! ❤️</p>
+  <span>Forever wishing happiness for you ✨</span>
+</div>
+
+<footer>CRAFTED WITH LOVE & A LITTLE MAGIC ♡</footer>
+</main>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup()">×</button>
+    <div class="popup-emoji">🧸</div>
+    <p class="eyebrow">A SPECIAL MESSAGE</p>
+    <h2>You're someone's<br><em>favourite person!</em></h2>
+    <p>And today, you deserve a little extra magic. Ready?</p>
+    <button class="primary-btn" onclick="startExperience()">Let's Celebrate! ♡</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">You are magical! ♡</div>
+<script src="script.js"></script>
+</body>
+</html>

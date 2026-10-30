@@ -1,0 +1,107 @@
+
+#dhanshri-romantic-extras {
+  width:min(1000px,92%);
+  margin:45px auto;
+  padding:25px 15px;
+  text-align:center;
+  background:linear-gradient(145deg,#fff8fb,#fff0f5,#fffaf5);
+  border:1px solid #f0d2df;
+  border-radius:28px;
+  box-shadow:0 15px 45px rgba(160,80,110,.10);
+  color:#87506a;
+}
+.romantic-heading {padding:20px 8px 30px}
+.romantic-heading span,.letter-small {
+  letter-spacing:3px;font-size:11px;color:#c07b98;
+}
+.romantic-heading h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(25px,6vw,38px);
+  color:#914967;margin:12px 0;
+}
+.romantic-heading p {line-height:1.7;color:#a47789}
+.romantic-feature {
+  max-width:650px;margin:20px auto;padding:25px 16px;
+  border:1px solid #f1d5e0;border-radius:23px;
+  background:rgba(255,255,255,.85);
+  box-shadow:0 8px 25px rgba(150,70,100,.07);
+}
+.feature-icon {font-size:38px;margin-bottom:10px}
+.romantic-feature h3 {
+  font-family:'Playfair Display',serif;
+  color:#984f6e;font-size:23px;margin:8px 0;
+}
+.romantic-feature p {line-height:1.8;color:#936c7d}
+.romantic-btn,.smile-note-buttons button {
+  border:0;border-radius:30px;padding:12px 21px;
+  color:white;background:linear-gradient(135deg,#e59ab5,#bd668b);
+  box-shadow:0 5px 15px rgba(190,95,135,.18);
+  cursor:pointer;margin:7px;font-size:14px;
+}
+.wish-cake {font-size:75px;margin:18px}
+.romantic-result {
+  padding:12px;border-radius:14px;
+  background:#fff4f8;color:#995873!important;
+  min-height:20px;margin:15px auto 0;
+}
+.wish-stars {display:flex;justify-content:center;gap:15px;margin:20px}
+.wish-stars button {
+  border:0;background:#fff0f6;color:#c47799;
+  border-radius:50%;width:48px;height:48px;font-size:27px;
+}
+.music-upload {
+  display:inline-block;padding:12px 22px;border-radius:25px;
+  background:#f9e2eb;color:#97516e;cursor:pointer;margin:12px;
+}
+.music-upload input {display:none}
+#birthday-audio {display:block;width:min(100%,340px);margin:15px auto}
+.music-hint {font-size:12px!important}
+.romantic-letter-modal {
+  display:none;position:fixed;inset:0;z-index:100002;
+  padding:18px;background:rgba(48,20,35,.75);
+  align-items:center;justify-content:center;backdrop-filter:blur(6px);
+}
+.romantic-letter-modal.show {display:flex}
+.romantic-letter-paper {
+  position:relative;width:min(460px,100%);max-height:85vh;
+  overflow:auto;padding:32px 23px;
+  border-radius:22px;background:#fff9f5;
+  border:2px solid #eac5d3;
+  box-shadow:0 20px 60px #0004;
+  animation:letterAppear .45s ease both;
+}
+@keyframes letterAppear {
+  from {opacity:0;transform:translateY(20px) scale(.95)}
+  to {opacity:1;transform:translateY(0) scale(1)}
+}
+.letter-close {
+  position:absolute;right:14px;top:10px;
+  border:0;background:none;color:#99516e;font-size:30px;
+}
+.letter-decoration {font-size:40px}
+.romantic-letter-paper h2 {
+  color:#994d6c;font-family:'Playfair Display',serif;
+}
+.letter-body {
+  text-align:left;color:#795466;line-height:1.9;font-size:15px;
+}
+.letter-sign {
+  color:#b76e8b;font-family:'Dancing Script',cursive;
+  font-size:23px;margin-top:20px;
+}
+.birthday-confetti {
+  position:fixed;top:-30px;z-index:100003;
+  pointer-events:none;font-size:22px;
+  animation:confettiFall 3s ease-in forwards;
+}
+@keyframes confettiFall {
+  to {transform:translateY(110vh) rotate(500deg);opacity:0}
+}
+@media(max-width:420px) {
+  .romantic-feature {padding:22px 12px}
+  .smile-note-buttons button {font-size:12px;padding:11px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .romantic-letter-paper,.birthday-confetti {animation:none}
+}
+

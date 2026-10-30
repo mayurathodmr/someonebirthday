@@ -1,0 +1,154 @@
+// PERSONALIZE YOUR WEBSITE HERE
+const CONFIG = {
+  name: "Beautiful",
+  message: "On your special day, I just want you to know how wonderful you are. May your smile never fade, your dreams find their wings, and your life always be filled with beautiful little moments. You deserve all the happiness this world has to offer. Keep shining, keep smiling and always be YOU. ♡"
+};
+
+const intro = document.getElementById("intro");
+const main = document.getElementById("main");
+const popup = document.getElementById("popup");
+
+document.querySelector(".intro h1").innerHTML =
+  `Hey, <span>${CONFIG.name}!</span>`;
+document.querySelector(".hero h1").innerHTML =
+  `Happy Birthday<br><span class="gradient">${CONFIG.name}!</span>`;
+document.getElementById("messageText").textContent = CONFIG.message;
+
+function openSurprise(){
+  document.getElementById("gift").style.transform="scale(1.2) rotate(12deg)";
+  setTimeout(()=>popup.classList.add("show"),250);
+}
+function closePopup(){popup.classList.remove("show")}
+function startExperience(){
+  closePopup();
+  intro.classList.add("hidden");
+  main.classList.remove("hidden");
+  window.scrollTo({top:0,behavior:"smooth"});
+  setTimeout(()=>toast("Your special day starts now! ♡"),500);
+}
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+function toast(text){
+  const t=document.getElementById("toast");
+  t.textContent=text;t.classList.add("show");
+  setTimeout(()=>t.classList.remove("show"),2600);
+}
+function blowCandles(){
+  document.querySelectorAll(".flame").forEach(f=>f.classList.add("off"));
+  document.getElementById("wishText").textContent="May all your wishes come true! ✨";
+  toast("Wish sent to the universe! 💗");
+  confetti();
+}
+function celebrate(){
+  confetti();
+  toast("You deserve the whole universe! 🌸");
+}
+function confetti(){
+  const symbols=["💗","💕","✨","🌸","🎀","💖","🦋"];
+  for(let i=0;i<65;i++){
+    const el=document.createElement("span");
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:-30px;font-size:${15+Math.random()*20}px;z-index:50;pointer-events:none;transition:transform ${2+Math.random()*2}s linear,opacity 3s`;
+    document.body.appendChild(el);
+    requestAnimationFrame(()=>{el.style.transform=`translate(${Math.random()*160-80}px,110vh) rotate(${Math.random()*600}deg)`;el.style.opacity="0"});
+    setTimeout(()=>el.remove(),4500);
+  }
+}
+function floatingHearts(){
+  const el=document.createElement("span");
+  el.className="heart";
+  el.textContent=["♡","♥","✧","💕"][Math.floor(Math.random()*4)];
+  el.style.left=Math.random()*100+"vw";
+  el.style.fontSize=(12+Math.random()*20)+"px";
+  el.style.animationDuration=(7+Math.random()*7)+"s";
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),15000);
+}
+setInterval(floatingHearts,700);
+
+
+// ===== SPECIAL LOVE SURPRISE =====
+function specialCakeWish() {
+  const scene = document.querySelector('.cake-scene');
+  if (scene) scene.classList.add('blown');
+  const msg = document.getElementById('cake-message');
+  if (msg) msg.textContent = "Your smile is the most beautiful wish! Happy Birthday, Dhanshri! ❤️";
+  if (typeof confetti === 'function') confetti();
+  launchLoveBalloons();
+  launchLovePetals();
+}
+
+function launchLoveBalloons() {
+  const emojis = ['🎈','💗','❤️','💕','🎀'];
+  for (let i=0;i<24;i++) {
+    const el=document.createElement('div');
+    el.className='love-balloon';
+    el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    el.style.left=Math.random()*100+'vw';
+    el.style.animationDelay=(Math.random()*3)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),11000);
+  }
+}
+
+function launchLovePetals() {
+  const emojis=['🌹','🌸','💮','💗'];
+  for(let i=0;i<22;i++){
+    const el=document.createElement('div');
+    el.className='love-petal';
+    el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    el.style.left=Math.random()*100+'vw';
+    el.style.animationDelay=(Math.random()*4)+'s';
+    el.style.fontSize=(15+Math.random()*18)+'px';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),10000);
+  }
+}
+
+
+
+/* PREMIUM SCROLL REVEAL */
+(function(){
+  function setupLoveReveal(){
+    const selectors = [
+      "section h1",
+      "section h2",
+      ".memory-card",
+      ".photo-card",
+      ".gallery-item",
+      ".letter-card",
+      ".cake-scene",
+      ".marathi-card"
+    ];
+
+    const elements = document.querySelectorAll(selectors.join(","));
+    elements.forEach(el => {
+      if (!el.classList.contains("reveal-love")) {
+        el.classList.add("reveal-love");
+      }
+    });
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach(el => el.classList.add("visible-love"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible-love");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    elements.forEach(el => observer.observe(el));
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupLoveReveal);
+  } else {
+    setupLoveReveal();
+  }
+})();

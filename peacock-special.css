@@ -1,0 +1,147 @@
+
+/* PEACOCK FINAL BIRTHDAY EXPERIENCE */
+html { scroll-behavior:smooth; }
+
+.peacock-age-chip {
+  display:block;
+  width:fit-content;
+  margin:12px auto;
+  padding:10px 18px;
+  border-radius:30px;
+  background:linear-gradient(120deg,#fff0f6,#fff9ee);
+  color:#a65378;
+  border:1px solid #efc9d9;
+  font-size:14px;
+  box-shadow:0 5px 18px #bd78951a;
+}
+
+.peacock-final {
+  width:min(900px,92%);
+  margin:55px auto 35px;
+  padding:30px 17px;
+  text-align:center;
+  border:1px solid #efd0dd;
+  border-radius:30px;
+  background:linear-gradient(145deg,#fff7fb,#fff0f5,#fffaf1);
+  box-shadow:0 15px 45px #a65b7918;
+  color:#86536a;
+  overflow:hidden;
+}
+.peacock-final .peacock-eyebrow {
+  color:#bd7895;
+  letter-spacing:3px;
+  font-size:11px;
+}
+.peacock-final h2 {
+  font-family:'Playfair Display',serif;
+  color:#914767;
+  font-size:clamp(27px,6vw,39px);
+  margin:12px 0;
+}
+.peacock-final .peacock-intro {
+  line-height:1.8;
+  max-width:570px;
+  margin:12px auto 25px;
+}
+.peacock-quiz-card {
+  background:#fff;
+  border:1px solid #f0d5e0;
+  border-radius:20px;
+  padding:19px 13px;
+  margin:14px auto;
+  max-width:590px;
+  box-shadow:0 7px 20px #9c5b7510;
+}
+.peacock-quiz-card h3 {
+  color:#99516e;
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+}
+.peacock-answer-btn,.peacock-final-btn {
+  border:0;
+  border-radius:25px;
+  padding:11px 19px;
+  margin:8px 4px;
+  color:white;
+  background:linear-gradient(130deg,#e5a0b9,#bd6d8e);
+  cursor:pointer;
+  font-size:14px;
+}
+.peacock-answer {
+  display:none;
+  padding:12px;
+  margin:10px auto 0;
+  background:#fff2f7;
+  border-radius:14px;
+  line-height:1.8;
+  color:#95516e;
+}
+.peacock-answer.show {display:block;animation:peacockReveal .4s ease both;}
+@keyframes peacockReveal {
+  from {opacity:0;transform:translateY(8px);}
+  to {opacity:1;transform:translateY(0);}
+}
+.peacock-flirt {
+  margin:30px auto;
+  max-width:600px;
+  padding:22px 15px;
+  border-radius:22px;
+  background:#fff;
+  border:1px dashed #e7b6c9;
+  line-height:2;
+  color:#9c6079;
+}
+.peacock-signature {
+  margin-top:35px;
+  padding:25px 12px;
+  border-top:1px solid #efd2de;
+}
+.peacock-signature .bird {
+  font-size:58px;
+  display:inline-block;
+  animation:peacockBird 2.5s ease-in-out infinite;
+}
+@keyframes peacockBird {
+  0%,100% {transform:rotate(-5deg) translateY(0);}
+  50% {transform:rotate(5deg) translateY(-7px);}
+}
+.peacock-signature h3 {
+  font-family:'Dancing Script',cursive;
+  font-size:34px;
+  color:#a45275;
+  margin:8px;
+}
+.peacock-wish {
+  line-height:1.9;
+  max-width:580px;
+  margin:15px auto;
+  color:#80566b;
+}
+.peacock-miss-box {
+  margin:22px auto 5px;
+  padding:22px 12px;
+  background:linear-gradient(135deg,#fff0f6,#fff8fb);
+  border-radius:20px;
+}
+.peacock-miss-box h3 {
+  font-family:'Dancing Script',cursive;
+  font-size:29px;
+  color:#a65378;
+}
+.peacock-miss-response {
+  min-height:45px;
+  color:#a65378;
+  line-height:1.8;
+  padding:8px;
+}
+.peacock-floating {
+  display:inline-block;
+  animation:peacockFloat 3s ease-in-out infinite;
+}
+@keyframes peacockFloat {
+  0%,100% {transform:translateY(0);}
+  50% {transform:translateY(-9px);}
+}
+@media(prefers-reduced-motion:reduce) {
+  .peacock-floating,.peacock-signature .bird {animation:none;}
+}

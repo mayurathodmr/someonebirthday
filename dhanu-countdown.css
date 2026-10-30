@@ -1,0 +1,17 @@
+.dhanu-countdown-section{position:relative;overflow:hidden;margin:35px 14px;padding:28px 17px;text-align:center;border:1px solid #f0c5e6;border-radius:27px;background:linear-gradient(145deg,#fff5fb,#f3eaff,#fff7fc);box-shadow:0 12px 35px #9b559b20;color:#70416e}
+.dhanu-countdown-section h2{font-family:Georgia,serif;color:#a34b91;font-size:25px;margin:10px 0}
+.dhanu-countdown-section .dhanu-subtitle{font-size:13px;color:#986b94}
+.dhanu-age-number{font-family:Georgia,serif;font-size:48px;font-weight:bold;color:#b45b9d;margin:12px 0 0}
+.dhanu-age-label{font-size:12px;letter-spacing:2px;color:#986b94}
+.dhanu-count-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:22px 0}
+.dhanu-count-item{padding:13px 3px;border:1px solid #f1d0e9;border-radius:15px;background:#ffffffc9}
+.dhanu-count-item strong{display:block;font-size:25px;color:#a34b91;font-variant-numeric:tabular-nums}
+.dhanu-count-item span{font-size:10px;color:#956a91;text-transform:uppercase;letter-spacing:1px}
+.dhanu-date-line{font-size:13px;line-height:1.9;color:#8d638a}
+.dhanu-celebration{font-size:28px;letter-spacing:5px;margin:14px 0;animation:dhanuCelebrate 1.5s ease-in-out infinite}
+.dhanu-count-heart{position:absolute;pointer-events:none;animation:dhanuCountFloat 4s ease-in-out infinite;opacity:.55}
+.dhanu-countdown-section .dhanu-birthday-status{font-weight:700;color:#a34b91;margin:12px 0}
+@keyframes dhanuCelebrate{0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.12) rotate(3deg)}}
+@keyframes dhanuCountFloat{0%,100%{transform:translateY(8px)}50%{transform:translateY(-13px)}}
+@media(max-width:350px){.dhanu-count-grid{gap:5px}.dhanu-count-item strong{font-size:20px}.dhanu-count-item span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.dhanu-celebration,.dhanu-count-heart{animation:none}}
